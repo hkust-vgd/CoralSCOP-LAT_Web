@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="description"
+            content="MarineEval: Assessing the Marine Intelligence of Vision-Language Models"
+        />
+        <meta
+            name="keywords"
+            content="Computer Vision, Coral Segmentation, Annotation Tool, Coral Reef"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>CoralSCOP-LAT</title>
+        <link
+            rel="icon"
+            href="static/images/webpage_icon.png"
+            type="image/png"
+        />
+        <link rel="stylesheet" href="./static/css/template.css" />
+        <script
+            src="https://kit.fontawesome.com/adea1f1b6d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <header class="paper-header">
+            <img
+                src="static/images/title_background.jpg"
+                alt="Header background image"
+            />
+            <div class="header">
+                <h1>
+                    CoralSCOP-LAT: Labeling and analyzing tool for coral reef
+                    images <br />
+                    with dense semantic mask
+                </h1>
+
+                <div class="authors">
+                    <a href="" target="_blank" rel="noopener noreferrer"
+                        >Yuk-Kwan Wong</a
+                    ><sup>1</sup>,
+                    <a href="" target="_blank" rel="noopener noreferrer"
+                        >Ziqiang Zheng</a
+                    ><sup>1*</sup>,
+                    <a href="" target="_blank" rel="noopener noreferrer"
+                        >Mingzhe Zhang</a
+                    ><sup>1</sup>,
+                    <a href="" target="_blank" rel="noopener noreferrer"
+                        >David J. Suggett</a
+                    ><sup>2,3</sup>,
+                    <a
+                        href="https://saikit.org/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Sai-Kit Yeung</a
+                    ><sup>1</sup>
+                </div>
+
+                <div class="affiliations">
+                    <sup>1</sup>Hong Kong University of Science and Technology,
+                    Hong Kong <br />
+                    <sup>2</sup>King Abdullah University of Science and
+                    Technology, Saudi Arabia <br />
+                    <sup>3</sup>University of Technology Sydney, Australia
+                </div>
+
+                <div class="conference">
+                    <!-- Conference name with bold short form -->
+                    <em>Ecological Informatics</em>
+                </div>
+
+                <div class="corresponding-note">
+                    * Corresponding author:
+                    <a
+                        href="mailto:zhengziqiang1@gmail.com"
+                        style="color: #ffebc6"
+                        >zhengziqiang1@gmail.com</a
+                    >
+                </div>
+
+                <div class="link-buttons">
+                    <a
+                        href="static/papers/coralscop-lat_main_paper.pdf"
+                        class="link-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                    >
+                        <i class="fas fa-file-pdf icon"></i>
+                        <span>Paper</span>
+                    </a>
+
+                    <a
+                        href="https://www.sciencedirect.com/science/article/pii/S157495412500411X"
+                        class="link-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download
+                    >
+                        <i class="fa-solid fa-globe" style="color: #ffffff"></i>
+                        <span>Elsevier</span>
+                    </a>
+
+                    <a
+                        href="https://arxiv.org/abs/2410.20436"
+                        class="link-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="static/icons/arxiv-logomark-small.svg"
+                            class="icon"
+                            alt="arXiv logo"
+                        />
+                        <span>arXiv</span>
+                    </a>
+
+                    <a
+                        href="https://github.com/ykwongaq/CoralSCOP-LAT"
+                        class="link-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fab fa-github icon"></i>
+                        <span>Code</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section>
+                <h2>Overview</h2>
+                <figure>
+                    <img
+                        src="static/images/overview.svg"
+                        alt="CoralSCOP-LAT Overview"
+                    />
+                    <figcaption>Figure 1. CoralSCOP-LAT overview.</figcaption>
+                </figure>
+                <p>
+                    The <span class="toolname">CoralSCOP-LAT</span> is a coral
+                    reef image analysis and labeling tool that automatically
+                    segments and analyzes coral regions. By leveraging advanced
+                    machine learning models tailored for coral reef
+                    segmentations, it enables users to generate dense
+                    segmentation maks with minimal manual effort, enhancing both
+                    the labeling efficiency and precision of coral reef analysis
+                </p>
+            </section>
+
+            <section>
+                <h2>Demo</h2>
+
+                <figure class="video-figure">
+                    <iframe
+                        width="650"
+                        height="400"
+                        src="https://www.youtube.com/embed/iRezDNN7e9Q?si=bzzzLEONrxEXlAB6"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                    <figcaption>
+                        Demonstration of the
+                        <span class="toolname">CoralSCOP-LAT</span> segmentation
+                        workflow.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h2>Installation</h2>
+                <p>
+                    Please follow the instruction on
+                    <a href="https://github.com/ykwongaq/CoralSCOP-LAT"
+                        >Github</a
+                    >
+                    to install the tool.
+                </p>
+            </section>
+
+            <section>
+                <h2>Workflow</h2>
+                <figure>
+                    <img
+                        src="static/images/Workflow.svg"
+                        alt="CoralSCOP-LAT Workflow"
+                    />
+                    <figcaption>
+                        Figure 2.
+                        <span class="toolname">CoralSCOP-LAT</span> workflow.
+                    </figcaption>
+                </figure>
+                <p>
+                    The <span class="toolname">CoralSCOP-LAT</span> workflow
+                    begins with users selecting target coral reef images for
+                    analysis. During the Project Preparation stage, the selected
+                    images are processed by
+                    <span class="toolname">CoralSCOP-LAT</span> to extract image
+                    features and automatically segment coral regions. The
+                    outcomes of this preparation are saved in a project file,
+                    which can be reloaded by the user for subsequent analysis.
+                    Additionaly, the system enables the automated generation of
+                    visualizations and statistical reports based on the analyzed
+                    data.
+                </p>
+            </section>
+
+            <section>
+                <h2>Performance</h2>
+                <figure>
+                    <img
+                        src="static/images/Generalization.svg"
+                        alt="Accuracy of CoralSCOP-LAT"
+                    />
+                    <figcaption>
+                        Figure 3. Coral segmentation performance.
+                    </figcaption>
+                </figure>
+                <p>
+                    <span class="toolname">CoralSCOP-LAT</span> automatically
+                    segments coral regions with high accuracy. We evaluated its
+                    segmentation performance on coral images from 10 distinct
+                    reef sites, demonstrating strong generalization capability
+                    across diverse reef environments.
+                </p>
+            </section>
+
+            <section>
+                <h2>Citation</h2>
+                <div class="code-container">
+                    <button class="copy-btn" id="copyButton">Copy</button>
+                    <pre>
+                        <code id="bibtexBlock">
+@article{WONG2025103402,
+    title = {CoralSCOP-LAT: Labeling and analyzing tool for coral reef images with dense semantic mask},
+    journal = {Ecological Informatics},
+    volume = {91},
+    pages = {103402},
+    year = {2025},
+    issn = {1574-9541},
+    doi = {https://doi.org/10.1016/j.ecoinf.2025.103402},
+    url = {https://www.sciencedirect.com/science/article/pii/S157495412500411X},
+    author = {Yuk Kwan Wong and Ziqiang Zheng and Mingzhe Zhang and David J. Suggett and Sai-Kit Yeung},
+    keywords = {Coral reefs, Coral segmentation, Semi-automatic annotation tool, Machine learning},
+}
+                        </code>
+                    </pre>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            This page has been viewed <span id="clickCount">0</span> times.
+        </footer>
+    </body>
+
+    <script src="static/js/citation.js"></script>
+    <script src="static/js/pageCount.js"></script>
+</html>
